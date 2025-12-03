@@ -1,4 +1,6 @@
 import { test } from "../../fixtures/authFixture";
+import { expect } from "../../fixtures/authFixture";
+
 import { ProductsPage } from "../../pages/ProductsPage";
 
 test("should logout user from burger menu", async ({ page }) => {
@@ -10,5 +12,6 @@ test("should logout user from burger menu", async ({ page }) => {
     await productsPage.burgerMenu.click();
     await page.getByRole("link", { name: "Logout" }).click();
 
-    await page.waitForURL("**/saucedemo.com");
+    // FIX matcher URL
+    await expect(page).toHaveURL(/saucedemo\.com/);
 });
