@@ -1,12 +1,17 @@
 import { test as base } from "@playwright/test";
 
 export const test = base.extend({
-    page: async ({ page }, use) => {
-        await page.context().addInitScript(() => {
+    context: async ({ browser }, use) => {
+        const context = await browser.newContext({
+            storageState: "storageStates/standardUser.json"
         });
-
-        await use(page);
+        await use(context);
     },
+
+    page: async ({ context }, use) => {
+        const page = await context.newPage();
+        await use(page);
+    }
 });
 
 export const expect = test.expect;
