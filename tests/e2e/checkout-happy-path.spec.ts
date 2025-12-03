@@ -10,15 +10,15 @@ test("should complete checkout successfully", async ({ page }) => {
     const cartPage = new CartPage(page);
     const checkoutPage = new CheckoutPage(page);
 
-    // login (jeszcze bez fixture)
+    // login (without fixture yet)
     await page.goto("https://www.saucedemo.com/");
     await page.getByPlaceholder("Username").fill(standardUser.username);
     await page.getByPlaceholder("Password").fill(standardUser.password);
     await page.getByRole("button", { name: "Login" }).click();
 
-    await expect(page).toHaveURL("**/inventory.html");
+    await expect(page).toHaveURL(/inventory\.html/);
 
-    // flow zakupowy
+    // shopping flow 
     await productsPage.addProductToCartByName("Sauce Labs Backpack");
     await productsPage.goToCart();
 
