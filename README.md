@@ -19,6 +19,7 @@ The framework uses the **SauceDemo** application as the target system under test
 ---
 
 ## 📁 Project Structure
+```md
 playwright-e2e-framework-ts/
 │
 ├── pages/
@@ -49,7 +50,7 @@ playwright-e2e-framework-ts/
 ├── playwright.config.ts
 ├── package.json
 └── README.md
-
+```
 
 ---
 
@@ -169,21 +170,20 @@ npx playwright show-report
 
 This framework demonstrates:
 
-Realistic Playwright automation structure
+- Realistic Playwright automation structure
 
-Clean separation of responsibilities
+- Clean separation of responsibilities
 
-Reusable POM classes
+- Reusable POM classes
 
-Authentication fixture setup
+- Authentication fixture setup
+- Data-driven test files
 
-Data-driven test files
+- Taged test suites (smoke/regression)
 
-Taged test suites (smoke/regression)
+- Fully working E2E flows (login, cart, checkout, logout)
 
-Fully working E2E flows (login, cart, checkout, logout)
-
-It is ready to be presented to employers or used as a foundation for a larger automation system.
+- It is ready to be presented to employers or used as a foundation for a larger automation system.
 
 ## 🔧 Author
 
