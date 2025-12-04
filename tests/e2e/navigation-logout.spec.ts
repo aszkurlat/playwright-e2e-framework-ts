@@ -3,7 +3,7 @@ import { expect } from "../../fixtures/authFixture";
 
 import { ProductsPage } from "../../pages/ProductsPage";
 
-test("should logout user from burger menu", async ({ page }) => {
+test("should logout user from burger menu @regression", async ({ page }) => {
     const productsPage = new ProductsPage(page);
 
     await page.goto("/inventory.html");

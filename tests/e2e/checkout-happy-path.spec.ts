@@ -5,7 +5,7 @@ import { CheckoutPage } from "../../pages/CheckoutPage";
 import { checkoutData } from "../../data/checkoutData";
 import { standardUser } from "../../data/users";
 
-test("should complete checkout successfully", async ({ page }) => {
+test("should complete checkout successfully @regression", async ({ page }) => {
     const productsPage = new ProductsPage(page);
     const cartPage = new CartPage(page);
     const checkoutPage = new CheckoutPage(page);

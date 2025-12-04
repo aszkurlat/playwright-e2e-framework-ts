@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 import { LoginPage } from "../../pages/LoginPage";
 import { lockedOutUser, invalidUser } from "../../data/users";
 
-test.describe("Login - negative scenarios", () => {
+test.describe("Login - negative scenarios @regression", () => {
 
     test("should show error for locked out user", async ({ page }) => {
         const loginPage = new LoginPage(page);

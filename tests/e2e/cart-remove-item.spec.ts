@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 import { ProductsPage } from "../../pages/ProductsPage";
 import { CartPage } from "../../pages/CartPage";
 
-test("should remove item from cart", async ({ page }) => {
+test("should remove item from cart @regression", async ({ page }) => {
     const productsPage = new ProductsPage(page);
     const cartPage = new CartPage(page);
 
