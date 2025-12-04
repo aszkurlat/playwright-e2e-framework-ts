@@ -88,11 +88,11 @@ This clear separation makes tests small, readable, and easy to maintain.
 
 Initial authentication is performed once in:
 
-global-setup.ts
+- `global-setup.ts`
 
 It logs in with a valid user and saves session data to:
 
-storageStates/standardUser.json
+- `storageStates/standardUser.json`
 
 Tests that import the authenticated fixture:
 
@@ -113,52 +113,57 @@ run without stored authentication and perform manual login inside the test.
 
 Fast, critical path test:
 
-login-positive.spec.ts
-(@smoke tag)
+- `login-positive.spec.ts` (`@smoke tag`)
 
 Run:
-
+```bash
 npm run test:smoke
+```
 
 🔹 Regression
 
 Full functional coverage:
 
-login-negative.spec.ts
+- `login-negative.spec.ts`
 
-cart-remove-item.spec.ts
+- `cart-remove-item.spec.ts`
 
-checkout-happy-path.spec.ts
+- `checkout-happy-path.spec.ts`
 
-navigation-logout.spec.ts
+- `navigation-logout.spec.ts`
 
-All contain tag: @regression
+All contain tag: `@regression`
 
 Run:
-
+```bash
 npm run test:regression
+```
 
 ▶️ Running All Tests
 
 Install dependencies:
-
+```bash
 npm install
 npx playwright install
+```
 
 
 Run entire project:
-
+```bash
 npx playwright test
+```
 
 
 Run in UI mode:
-
+```bash
 npx playwright test --ui
+```
 
 
 Open HTML report:
-
+```bash
 npx playwright show-report
+```
 
 ## 🎯 Summary
 
@@ -180,6 +185,6 @@ Fully working E2E flows (login, cart, checkout, logout)
 
 It is ready to be presented to employers or used as a foundation for a larger automation system.
 
-🔧 Author
+## 🔧 Author
 
 Created by Agnieszka Szkurłat as part of my QA Automation learning path.
